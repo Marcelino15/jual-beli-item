@@ -1,0 +1,105 @@
+@mixin section-border{
+    .icon{
+        width: 160px;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute; 
+            top: 4px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            height: 1px;
+            width: 160px;
+            background: $clrMain;
+        }
+    }
+    i {
+        position: relative;
+        font-size: 14px;
+        color: $clrMain;
+
+    }
+
+}
+
+@mixin section-title {
+    padding-bottom: 45px;
+
+    h2 {
+        text-transform: capitalize;
+        span {
+            font-weight: $fontBold;
+        }
+    }
+     p {
+         letter-spacing: 1px;
+         text-transform: capitalize;
+     }  
+}
+
+@mixin transform{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+@mixin banner-size {
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding-top: 160px;
+    position: relative;
+    z-index: 1;
+}
+
+@mixin banner-bg {
+    content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.2);
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+    
+}
+
+
+@mixin page-banner {
+    .page-banner-content {
+        background: #f5f5f5a6;
+        padding: 55px 50px 50px 50px;
+        border-radius: 10px 10px 0px 0px;
+        .title {
+            h2 {
+                font-family: $fontInter;
+                color: $clrPrimary;
+                font-weight: $fontBold !important;
+                padding-top: 10px;
+            }
+            h6 {
+                color: $clrPrimary;
+            }
+        }
+        .link {
+            font-family: $fontInter;
+            font-size: 16px;
+            text-transform: capitalize;
+
+            a {
+                color: $clrMain;
+                transition: $transition;
+                i {
+                    margin: 0px 5px;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

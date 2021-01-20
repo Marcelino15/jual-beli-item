@@ -1,0 +1,9 @@
+<script src="{{url('frontend/assets/js/jquery-3.3.1.min.js')}}"></script>
+<script src="{{url('frontend/assets/js/bootstrap.min.js')}}"></script>
+<script src="{{url('frontend/assets/js/owl.carousel.min.js')}}"></script>
+<script src="{{url('frontend/assets/js/jquery.fancybox.min.js')}}"></script>
+<script src="{{url('frontend/assets/js/jquery-ui.min.js')}}"></script>
+<script src="{{url('frontend/assets/js/jquery.nice-select.js')}}"></script>
+<script src="{{url('frontend/assets/js/coreNavigation-1.1.3.min.js')}}"></script>
+<script src="{{url('frontend/assets/js/popper.min.js')}}"></script>
+<script src="{{url('frontend/assets/js/script.js')}}"></script>
