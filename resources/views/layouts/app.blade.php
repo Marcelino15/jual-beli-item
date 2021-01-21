@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,5 +56,6 @@
         @include('includes.script')
 
     </body>
+
 
 </html>
