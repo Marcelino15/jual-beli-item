@@ -7,9 +7,9 @@
         <div class="row">
             <div class="col-12">
                 <div class="section-title text-center">
-                    <h2>Beli Items <span>Disini</span> </h2>
+                    <h2>{{ $barang->nama }}</span> </h2>
                     <p>
-                       Enjoy your games, in another level
+                        {{ $barang->deskipsi }}
                     </p>
                     <div class="section-border">
                         <div class="icon">
@@ -20,44 +20,27 @@
             </div>
         </div>
         <div class="row">
-            @foreach ($barang as $data)
-            <div class="col-lg-3 col-sm-6">
-                <div class="product-card">
-                    <div class="product-img">
-                        <img src="{{url('frontend/assets/img/product/'.$data->gambar1)}}" alt="Images">
-                        <div class="top-tag">
-                           {{-- <H6>HEALTH </H6>  --}}
-                            {{-- <div class="ribbon ribbon-color-01"> <span>sale</span></div> --}}
-                        </div>
-                    </div>
-                    <div class="content">
-                        <h5 class="d-flex align-item-center justify-content-between"><a href="#">{{$data->nama}}</a>
-                        <span>IDR {{ number_format($data->harga) }}</span>
-                            
-                        </h5>
-                        <div class="d-flex align-item-center justify-content-between">
-                            <a href="{{url('/keranjang/'.$data->id) }}" class="cart-btn btn btn-success">
-                                BELI
-                            <i class="ti-shopping-cart-full"></i></a>
-                            <a href="{{ url('/detail/'.$data->id) }}" class="detail-btn btn btn-warning">
-                                DETAIL
-                            <i class="fa fa-eye"></i></a>
-                           
-                        </div>
-                    </div>
-                </div>
-            </div>
-                
-            @endforeach
-            
 
-          
-        
-
-            
+        <div class="col-md-3">
+            {{ $barang->gambar1 }}
+        <div>
+           <div class="col-md-3">
+            {{ $barang->gambar2 }}
+        <div>
+            <div class="col-md-3">
+                {{ $barang->gambar3 }}
+            <div>
+              
+             <h4> IDR {{ number_format($barang->harga)}}</h4> 
 
            
-            
+             <div class="d-flex align-item-center justify-content-between">
+                <a href="{{url('/keranjang/'.$barang->id) }}" class="cart-btn btn btn-success">
+                    BELI
+                <i class="ti-shopping-cart-full"></i></a>
+               
+               
+            </div>
         </div>
     </div>
 </section>
