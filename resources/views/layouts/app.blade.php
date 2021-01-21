@@ -11,7 +11,12 @@
     </head>
     
     <body>
-    
+        @include('sweet::alert')
+        {{-- <div id="preloader">
+            <div id="status">
+                <img src="{{url('frontend/assets/img/logo/favicon.png')}}" alt="perloader">
+            </div>
+        </div> --}}
 
         @include('includes.navbar')
 
