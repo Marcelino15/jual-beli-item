@@ -19,7 +19,7 @@
             </div>
         </div>
 
-        @include('includes.navbar')
+        @include('layouts.navbar')
 
         <!-- Shop PAGE BANNER -->
 
