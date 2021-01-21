@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,20 +6,21 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>KUKUS ITEMS - "ENJOY YOUR BATTLE"</title>
-        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <title>Prolexe-HTML Template</title>
         @include('includes.style')
     </head>
-    
+
     <body>
-        @include('sweet::alert')
-        {{-- <div id="preloader">
+
+        <!-- Preloader -->
+
+        <div id="preloader">
             <div id="status">
                 <img src="{{url('frontend/assets/img/logo/favicon.png')}}" alt="perloader">
             </div>
-        </div> --}}
+        </div>
 
-        @include('includes.navbar')
+        @include('layouts.navbar')
 
         <!-- Shop PAGE BANNER -->
 
@@ -54,5 +56,6 @@
         @include('includes.script')
 
     </body>
+
 
 </html>
