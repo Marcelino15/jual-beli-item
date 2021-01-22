@@ -56,7 +56,7 @@
                     <input type="hidden" name="id_user" value="{{session('data')['id_user']}}">
                 </div>
                 <button type="submit" class="btn btn-success btn-sm text-uppercase">simpan</button>
-                <a href="{{route('penjual')}}" class="btn btn-primary btn-sm text-uppercase">kembali</a>
+                <a href="{{route('barang-list')}}" class="btn btn-primary btn-sm text-uppercase">kembali</a>
             </form>
         </div>
     </div>
