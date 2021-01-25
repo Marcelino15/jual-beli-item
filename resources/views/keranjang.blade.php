@@ -1,7 +1,7 @@
 @extends('layouts.app')
-
 @section('content')
 <table id="cart" class="table table-hover table-condensed">
+    {{ Auth::user()->id }}
     <thead>
     <tr>
         <th style="width:50%">Product</th>
@@ -19,7 +19,6 @@
             <tr>
                 <td data-th="Product">
                     <div class="row">
-                      
                         <div class="col-sm-9">
                             <h4 class="nomargin">{{ $details['nama'] }}</h4>
                         </div>
@@ -30,8 +29,6 @@
                     <a href="{{ url('/kurangi-kuantitas/'.$id) }}" class="btn btn-dark btn-sm">-</a>
                     {{ $details['qty'] }}
                     <a href="{{ url('/tambah-kuantitas/'.$id) }}" class="btn btn-dark btn-sm">+</a>
-                    
-                   
                 </td>
                 <td data-th="Subtotal" class="text-center">IDR {{ number_format($details['harga'] * $details['qty']) }}</td>
                 <td >
