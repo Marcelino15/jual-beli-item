@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <table id="cart" class="table table-hover table-condensed">
-    {{ Auth::user()->id }}
+    
     <thead>
     <tr>
         <th style="width:50%">Product</th>
@@ -43,10 +43,14 @@
         <td class="text-center"><strong>Total {{ $total }}</strong></td>
     </tr>
     <tr>
-        <td><a href="{{ url('/') }}" class="btn btn-warning"><i class="fa fa-angle-left"></i> Kembali</a></td>
+        <td>
+            <a href="{{ url('/') }}" class="btn btn-warning"><i class="fa fa-angle-left"></i> Kembali</a>
+            <a href="{{ url('/chekout') }}" class="btn btn-danger">CHECKOUT PESANAN</a>
+        </td>
         <td colspan="2" class="hidden-xs"></td>
         <td class="hidden-xs text-center"><strong>Total {{ number_format($total) }} Rupiah</strong></td>
     </tr>
     </tfoot>
+   
 </table>
 @endsection
