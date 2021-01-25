@@ -36,9 +36,14 @@
                             
                         </h5>
                         <div class="d-flex align-item-center justify-content-between">
+                            @if (Auth::user()==null)
+                                {{ "Login untuk membeli" }}
+                            @else
                             <a href="{{url('/keranjang/'.$data->id) }}" class="cart-btn btn btn-success">
                                 BELI
                             <i class="ti-shopping-cart-full"></i></a>
+                            @endif
+                          
                             <a href="{{ url('/detail/'.$data->id) }}" class="detail-btn btn btn-warning">
                                 DETAIL
                             <i class="fa fa-eye"></i></a>
