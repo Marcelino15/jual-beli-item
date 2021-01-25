@@ -47,7 +47,7 @@
                             <a href="{{ url('/detail/'.$data->id) }}" class="detail-btn btn btn-warning">
                                 DETAIL
                             <i class="fa fa-eye"></i></a>
-                           
+        
                         </div>
                     </div>
                 </div>
