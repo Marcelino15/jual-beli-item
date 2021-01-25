@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 use App\Penjual;
+use App\Transaksi;
 
 class PenjualController extends Controller
 {
@@ -53,6 +54,7 @@ class PenjualController extends Controller
         $post = [
             'nama'      => $data['nama'],
             'harga'     => str_replace('.','',$data['harga']),
+            'stock'     => $data['stock'],
             'deskripsi' => $data['desc'],
             'id_user'   => $data['id_user'],
             'gambar1'   => $gambar1,
@@ -109,6 +111,7 @@ class PenjualController extends Controller
         $post = [
             'nama'  => $data['nama'],
             'harga' => str_replace('.','',$data['harga']),
+            'stock' => $data['stock'],
             'deskripsi' => $data['desc']
         ];
         // print('<pre>');print_r($post);exit();
@@ -174,5 +177,15 @@ class PenjualController extends Controller
         $item->delete();
 
         return redirect()->route('barang-list');
+    }
+
+    public function transaksi_penjual(Request $request)
+    {
+        $id_penjual = $request->session()->get('data');
+        $items = Transaksi::all()->where('id_penjual','=',$id_penjual['id_user']);
+        
+        return view('pages.penjual.transaksi',[
+            'items' => $items,
+        ]);
     }
 }

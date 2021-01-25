@@ -60,5 +60,6 @@ Route::get('/penjual/barang_edit/{id}','PenjualController@edit_barang')->name('b
 Route::put('/penjual/penjual_update/{id}','PenjualController@update_barang')->name('barang-update');
 Route::delete('/penjual/barang_destroy/{id}','PenjualController@destroy_barang')->name('barang-destroy');
 Route::put('/penjual/barang-update-foto/{id}','PenjualController@update_foto_barang')->name('barang-update-foto');
+Route::get('/penjual/transaksi_penjual','PenjualController@transaksi_penjual')->name('transaksi');
 
 Route::get('/pembeli','PembeliController@index')->name('pembeli');

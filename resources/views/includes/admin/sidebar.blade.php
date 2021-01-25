@@ -31,7 +31,7 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-archive"></i></div>
                     Barang
                 </a>
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{route('transaksi')}}">
                     <div class="sb-nav-link-icon"><i class="fas fa-file-invoice-dollar"></i></div>
                     Transaksi
                 </a>

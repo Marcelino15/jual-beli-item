@@ -24,7 +24,7 @@
             <form action="{{route('barang-store')}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="row mb-3">
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-12">
                         <div class="form-group">
                             <label for="nama">Nama</label>
                             <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama Barang">
@@ -34,6 +34,12 @@
                         <div class="form-group">
                             <label for="harga">Harga</label>
                             <input type="text" class="form-control uang" id="harga" name="harga" placeholder="Masukkan Harga">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="stock">Stock</label>
+                            <input type="text" class="form-control uang" id="stock" name="stock" placeholder="Masukkan Stock">
                         </div>
                     </div>
                     <div class="col-12 col-md-4">

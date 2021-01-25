@@ -25,7 +25,7 @@
                 @method('PUT')    
                 @csrf
                 <div class="row mb-3">
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-12">
                         <div class="form-group">
                             <label for="nama">Nama</label>
                             <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama Barang" value="{{$item->nama}}">
@@ -35,6 +35,12 @@
                         <div class="form-group">
                             <label for="harga">Harga</label>
                             <input type="text" class="form-control uang" id="harga" name="harga" placeholder="Masukkan Harga" value="{{number_format($item->harga,0,'.','.')}}">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="stock">Stock</label>
+                            <input type="text" class="form-control uang" id="stock" name="stock" placeholder="Masukkan Stock" value="{{$item->stock}}">
                         </div>
                     </div>
                     <div class="col-12 col-md-4 text-center">
